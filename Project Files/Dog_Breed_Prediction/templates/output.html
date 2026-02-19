@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="logo">DOG BREED.</div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/predict" class="btn">Predict</a>
+    </nav>
+</header>
+
+<section class="result-wrapper">
+    <div class="result-container">
+        <h3 class="result-title">The Dog Breed is</h3>
+        <h1 class="result-breed">{{ prediction }}<span>.</span></h1>
+
+        <a href="/predict" class="result-button">Try Another</a>
+    </div>
+</section>
+
+</body>
+</html>

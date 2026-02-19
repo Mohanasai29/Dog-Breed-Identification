@@ -1,0 +1,397 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    padding-top: 80px; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f4b400;
+}
+
+.btn {
+    padding: 8px 18px;
+    border: 1px solid #f4b400;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background: #f4b400;
+    color: #000;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #222 0%, #000 70%);
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #bbb;
+    font-size: 18px;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: #f4b400;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    background: #d89c00;
+}
+
+.about-section {
+    background: #f5f5f5;
+    padding: 100px 10%;
+    scroll-margin-top: 100px;
+}
+
+.about-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 1;
+}
+
+.search-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6a3de8;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.dog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dog-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.dog-grid img:hover {
+    transform: scale(1.08);
+}
+
+.about-right {
+    flex: 1;
+}
+
+.feature-box {
+    margin-bottom: 35px;
+}
+
+.feature-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+.contact-section {
+    background: #f5f5f5;
+    padding: 100px 10%;
+    scroll-margin-top: 100px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.contact-info h2 {
+    margin: 10px 0 30px;
+    font-size: 28px;
+    color: #111;
+}
+
+.info-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-box .icon {
+    background: #f4b400;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.info-box h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #111;
+}
+
+.info-box p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .row {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f4b400;
+}
+
+.btn-contact {
+    background: #f4b400;
+    color: #000;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background: #d89c00;
+}
+
+.upload-section {
+    background: #0c0c0c;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.upload-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.upload-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+
+#file-upload {
+    display: none;
+}
+
+.custom-file-upload {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: 2px solid #f4b400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.custom-file-upload:hover {
+    background: #f4b400;
+    color: #000;
+}
+
+#file-name {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.btn-predict {
+    background: #f4b400;
+    color: #000;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-predict:hover {
+    background: #d89c00;
+}
+@media (max-width: 900px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .about-container,
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .dog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form .row {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+
+.result-wrapper {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #222 0%, #000 70%);
+    text-align: center;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.result-breed {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.result-breed span {
+    color: #f4b400; 
+}
+
+.result-button {
+    padding: 14px 35px;
+    background: #f4b400;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.result-button:hover {
+    background: #d89c00;
+}

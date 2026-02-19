@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Breed Identification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="logo">DOG BREED</div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="/predict" class="btn">Predict</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Dog Breed Identification</h1>
+        <p>Identification of Different Dog Breeds using Deep Learning (VGG19)</p>
+        <a href="/predict" class="btn-main">Start Prediction</a>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-left">
+            <h2 class="search-title">Search by Images</h2>
+
+            <div class="dog-grid">
+                <img src="{{ url_for('static', filename='images/dog1.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog2.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog3.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog4.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog5.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog6.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog7.png') }}" alt="">
+                <img src="{{ url_for('static', filename='images/dog8.png') }}" alt="">
+            </div>
+        </div>
+
+
+        <div class="about-right">
+
+            <div class="feature-box">
+                <h3>📂 Data Preparation</h3>
+                <p>
+                    The first step is preparing the dataset for CNN training. 
+                    This includes cleaning the data, organizing it into training 
+                    and validation sets, resizing images, and applying augmentation 
+                    techniques to improve generalization.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h3>🧠 Model Building</h3>
+                <p>
+                    We use the VGG19 deep learning architecture with transfer learning. 
+                    The pretrained ImageNet weights are used to extract features, and 
+                    custom fully connected layers are added for dog breed classification.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h3>📊 Model Training & Evaluation</h3>
+                <p>
+                    The model is trained using categorical crossentropy loss and 
+                    optimized with Adam optimizer. Performance is evaluated using 
+                    accuracy metrics to ensure reliable breed classification.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <h3>🚀 Model Deployment</h3>
+                <p>
+                    After training, the model is deployed using Flask. Users can 
+                    upload an image through the web interface, and the system 
+                    predicts the dog breed instantly with confidence score.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <span class="contact-label">CONTACT</span>
+            <h2>CONTACT US</h2>
+
+            <div class="info-box">
+                <div class="icon">📍</div>
+                <div>
+                    <h4>Location:</h4>
+                    <p>
+                        Survey no. 91, Sundarayya Vignana Kendram,<br>
+                        Technical Block, 6th floor, Madhava Reddy Colony,<br>
+                        Gachibowli, Hyderabad, Telangana 500032
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon">✉️</div>
+                <div>
+                    <h4>Email:</h4>
+                    <p>info@thesmartbridge.com</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="icon">📞</div>
+                <div>
+                    <h4>Call:</h4>
+                    <p>+91 6304320044</p>
+                </div>
+            </div>
+        </div>
+
+   <div class="contact-form">
+            <form>
+                <div class="row">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+
+                <input type="text" placeholder="Subject">
+
+                <textarea rows="5" placeholder="Message"></textarea>
+
+                <button type="submit" class="btn-contact">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Dog Breed Identification | Built with Flask & Deep Learning
+</footer>
+
+</body>
+</html>

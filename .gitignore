@@ -1,0 +1,9 @@
+dataset/
+venv/
+*.h5
+subset/
+__pycache__/dataset/
+venv/
+*.h5
+subset/
+__pycache__/
